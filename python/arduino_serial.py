@@ -10,7 +10,7 @@ from firebase import firebase
 firebaseURL = 'https://ece158b-swe-mt.firebaseio.com/'
 
 db = firebase.FirebaseApplication (firebaseURL, None)
-arduino = serial.Serial ('/dev/ttyACM0', baudrate=9600, timeout=1)
+arduino = serial.Serial ('/dev/ttyACM0', 9600, timeout=1)
 
 print 'DYEL (Midterm) - Arduino Serial'
 
