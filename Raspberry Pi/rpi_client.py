@@ -26,8 +26,11 @@ firebase_URL = Firebase('https://flickering-inferno-7283.firebaseio.com/message_
 date = time.strftime('%m/%d/%Y')
 
 while (1):
-    # Reset occupancy every day
+
     if date is not time.strftime('%m/%d/%Y'):
+    # Push data to Firebase before resetting counters
+        result = firebase_URL.push(data)
+    # Reset occupancy every day
         occupancy_enter = 0
         occupancy_exit = 0
 
